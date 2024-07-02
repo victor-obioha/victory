@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information Form</h1>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="stnum">Student No:</label>
+                <input type="number" class="form-control" id="stnum" required>
+            </div>
+            <div class="form-group">
+                <label for="stfname">First Name:</label>
+                <input type="text" class="form-control" id="stfname" required>
+            </div>
+            <div class="form-group">
+                <label for="stlname">Last Name:</label>
+                <input type="text" class="form-control" id="stlname" required>
+            </div>
+            <div class="form-group">
+                <label for="stgender">Gender:</label>
+                <input type="text" class="form-control" id="stgender" required>
+            </div>
+            <div class="form-group">
+                <label for="stlevel">Level:</label>
+                <input type="number" class="form-control" id="stlevel" required>
+            </div>
+            <div class="form-group">
+                <label for="stdob">Date of Birth (DD-MM-YYYY):</label>
+                <input type="text" class="form-control" id="stdob" required>
+            </div>
+            <div class="form-group">
+                <label for="storigin">Origin:</label>
+                <input type="text" class="form-control" id="storigin" required>
+            </div>
+            <div class="form-group">
+                <label for="staddr">Address:</label>
+                <input type="text" class="form-control" id="staddr" required>
+            </div>
+            <div class="form-group">
+                <label for="stdept">Department:</label>
+                <input type="text" class="form-control" id="stdept" required>
+            </div>
+            <div class="form-group">
+                <label for="stemail">Email Address:</label>
+                <input type="email" class="form-control" id="stemail" required>
+            </div>
+            <div class="form-group">
+                <label for="stphoneno">Phone Number:</label>
+                <input type="tel" class="form-control" id="stphoneno" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // JavaScript for handling form submission
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Collect form data
+            let stnum = document.getElementById("stnum").value;
+            let stfname = document.getElementById("stfname").value;
+            let stlname = document.getElementById("stlname").value;
+            let stgender = document.getElementById("stgender").value;
+            let stlevel = document.getElementById("stlevel").value;
+            let stdob = document.getElementById("stdob").value;
+            let storigin = document.getElementById("storigin").value;
+            let staddr = document.getElementById("staddr").value;
+            let stdept = document.getElementById("stdept").value;
+            let stemail = document.getElementById("stemail").value;
+            let stphoneno = document.getElementById("stphoneno").value;
+
+            // Display data in console (you can modify this to display on the page)
+            console.log("Student No:", stnum);
+            console.log("First Name:", stfname);
+            console.log("Last Name:", stlname);
+            console.log("Gender:", stgender);
+            console.log("Level:", stlevel);
+            console.log("Date of Birth:", stdob);
+            console.log("Origin:", storigin);
+            console.log("Address:", staddr);
+            console.log("Department:", stdept);
+            console.log("Email:", stemail);
+            console.log("Phone Number:", stphoneno);
+
+            // You can add further processing or display logic here
+            // For simplicity, just log the data for now
+        });
+    </script>
+</body>
+</html>
